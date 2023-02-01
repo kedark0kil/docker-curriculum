@@ -5,8 +5,17 @@ on:
         - master
 jobs:
   build:
-    runs-on: nginx-latest
+    runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+    - name: install nginx
+      run: |
+        apt-get update
+        apt-get install python-software-properties
+        apt-get upgrade
+        add-apt-repository ppa:nginx/development
+        apt-get install nginx
+        
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
