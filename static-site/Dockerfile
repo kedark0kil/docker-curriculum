@@ -1,6 +1,7 @@
 FROM nginx
 
-COPY static-site/html /usr/share/nginx/html
+WORKDIR static-site/
+COPY html /usr/share/nginx/html
 
 COPY static-site/wrapper.sh /
 
