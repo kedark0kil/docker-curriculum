@@ -6,13 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: install nginx
-      run: |
-        sudo apt-get upgrade
-        sudo apt-get install nginx
-        
+    steps: 
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
