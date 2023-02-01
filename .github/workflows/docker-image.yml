@@ -5,7 +5,7 @@ on:
         - master
 jobs:
   build:
-    runs-on: nginx
+    runs-on: nginx-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
