@@ -14,4 +14,4 @@ jobs:
 
         DOCKER_BUILDKIT=1 docker build static-site/. --file static-site/Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
 
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
+        docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io | docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
