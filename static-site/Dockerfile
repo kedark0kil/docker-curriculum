@@ -1,6 +1,6 @@
 FROM nginx
 
-COPY wrapper.sh /
+COPY static-site/wrapper.sh /
 
 COPY html /usr/share/nginx/html
 
