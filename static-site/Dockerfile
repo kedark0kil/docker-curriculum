@@ -1,8 +1,7 @@
-FROM kedark0kil/task-fluxcd:1.0
+FROM nginx
 
-WORKDIR static-site/
-COPY html/* /usr/share/nginx/html/
+COPY wrapper.sh /
 
-COPY static-site/wrapper.sh /
+COPY html /usr/share/nginx/html
 
 CMD ["./wrapper.sh"]
