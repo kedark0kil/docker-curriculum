@@ -5,7 +5,7 @@ on:
         - master
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: kedark0kil/task-fluxcd:1.0
     steps: 
     - uses: actions/checkout@v3
     - name: Build the Docker image
