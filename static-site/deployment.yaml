@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: static-files
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+    specs:
+      container:
+        name: task-fluxcd
+        image: kedark0kil/task-fluxcd
+        ports:
+          - name: http
+            containerPort: 8000

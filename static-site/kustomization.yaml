@@ -3,7 +3,7 @@ kind: Kustomization
 bases:
   - static-files
 resources:
-  - helmrelease.yaml
+  - deployment.yaml
 images:
   - name: kedark0kil/task-fluxcd
     newName: kedark0kil/task-fluxcd
