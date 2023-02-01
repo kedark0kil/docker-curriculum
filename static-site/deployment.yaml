@@ -1,6 +1,5 @@
----
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: static-files
   namespace: default
@@ -8,12 +7,20 @@ metadata:
     fluxcd.io/automated: "true"
 spec:
   replicas: 1
+  selector:
+    #assigns labels to the pods for future selection
+    matchLabels:
+      app: static-files
   strategy:
     type: Recreate
-    specs:
-      container:
-        name: task-fluxcd
+  template:
+    metadata:
+      labels:
+        app: static-files
+    spec:
+      containers:
+      - name: task-fluxcd
         image: kedark0kil/task-fluxcd
         ports:
           - name: http
-            containerPort: 8000
+            containerPort: 80
