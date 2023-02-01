@@ -19,7 +19,7 @@ jobs:
       -
         name: Build 
         run: |
-          DOCKER_BUILDKIT=1 docker build . --file static-site/Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
+          docker build . --file static-site/Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
       -
         name: push
         uses: docker/build-push-action@v4
