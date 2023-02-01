@@ -10,10 +10,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: install nginx
       run: |
-        apt-get install python-software-properties
-        apt-get upgrade
-        add-apt-repository ppa:nginx/development
-        apt-get install nginx
+        sudo apt-get install python-software-properties
+        sudo apt-get upgrade
+        sudo apt-get install nginx
         
     - uses: actions/checkout@v3
     - name: Build the Docker image
