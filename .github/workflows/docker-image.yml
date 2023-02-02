@@ -17,4 +17,16 @@ jobs:
         DOCKER_BUILDKIT=1 docker build static-site/. --file static-site/Dockerfile --tag kedark0kil/task-fluxcd
 
         docker push kedark0kil/task-fluxcd
+        
+    - name: Checkout  
+      uses: actions/checkout@v2  
+      with:  
+        fetch-depth: 0  
+      
+    - name: Version  
+      id: version  
+      uses: juliansangillo/tag-version@v1  
+      with:  
+        production-branch: master  
+        test-branch: image-tag 
 
