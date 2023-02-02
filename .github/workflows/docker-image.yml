@@ -24,4 +24,4 @@ jobs:
         name: 'MINOR'
         value: $((${{ secrets.MINOR }}+1))
         repository: kedark0kil/task-fluxcd
-        token: ${{ secrets.DOCKER_HUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
