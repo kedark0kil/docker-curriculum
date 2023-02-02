@@ -17,3 +17,10 @@ spec:
     - kind: ConfigMap
       name: static-site-configmap
     interval: 2m
+    chart:
+      spec:
+        chart: static-site
+        version: latest
+        sourceRef:
+          kind: HelmRepository
+          name: static-site

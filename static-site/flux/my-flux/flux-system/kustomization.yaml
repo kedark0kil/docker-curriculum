@@ -11,4 +11,4 @@ configMapGenerator:
   - name: static-site-configmap
     namespace: default
     files:
-      - values.yaml=static-site/charts/static-site/values.yaml
+      - static-site/charts/static-site/values.yaml
