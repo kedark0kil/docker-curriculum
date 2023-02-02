@@ -20,8 +20,6 @@ jobs:
     -
       name: Update Minor version
       uses: juliansangillo/tag-version@v1
-      with:
-        name: 'MINOR'
-        value: $((${{ secrets.MINOR }}+1))
-        repository: kedark0kil/task-fluxcd
-        token: ${{ secrets.GITHUB_TOKEN }}
+      with:  
+            production-branch: master  
+            test-branch: staging
