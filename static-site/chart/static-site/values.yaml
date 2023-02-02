@@ -8,7 +8,7 @@ image:
   repository: kedark0kil/task-fluxcd
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.1"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
@@ -72,7 +72,7 @@ autoscaling:
   enabled: false
   minReplicas: 1
   maxReplicas: 2
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 60
   # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
