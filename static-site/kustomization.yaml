@@ -4,7 +4,7 @@ bases:
   - static-site/
   - static-site/charts/
 resources:
-  - static-site.yaml
+  - static-site/static-site.yaml
 configMapGenerator:
   - name: static-site-configmap
     namespace: default
