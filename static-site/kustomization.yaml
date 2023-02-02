@@ -8,7 +8,3 @@ configMapGenerator:
     namespace: default
     files:
       - values.yaml=static-site/chart/static-site/values.yaml
-images:
-  - name: kedark0kil/task-fluxcd
-    newName: kedark0kil/task-fluxcd
-    newTag: "0.1"
