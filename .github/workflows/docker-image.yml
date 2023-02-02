@@ -16,4 +16,4 @@ jobs:
 
         DOCKER_BUILDKIT=1 docker build static-site/. --file static-site/Dockerfile --tag kedark0kil/task-fluxcd:$(docker images | awk '($1 == "kedark0kil/task-fluxcd") {print $2 += .01; exit}')
 
-        docker push kedark0kil/task-fluxcd:$GITHUB_SHA
+        docker push kedark0kil/task-fluxcd:$(docker images | awk '($1 == "kedark0kil/task-fluxcd") {print $2 += .01; exit}')
