@@ -13,5 +13,15 @@ jobs:
         docker logout
         
         echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
-        DOCKER_BUILDKIT=1 docker build static-site/. --file static-site/Dockerfile --tag kedark0kil/task-fluxcd:$(docker images | awk '($1 == "kedark0kil/task-fluxcd") {print $2 += .01; exit}')
-        docker push kedark0kil/task-fluxcd:$(docker images | awk '($1 == "kedark0kil/task-fluxcd") {print $2 += .01; exit}')
+
+        DOCKER_BUILDKIT=1 docker build static-site/. --file static-site/Dockerfile --tag kedark0kil/task-fluxcd:${{ secrets.MAJOR }}.${{ secrets.MINOR }}
+
+        docker push kedark0kil/task-fluxcd:${{ secrets.MAJOR }}.${{ secrets.MINOR }}
+    -
+      name: Update Minor version
+      uses: juliansangillo/tag-version@v1
+      with:
+        name: 'MINOR'
+        value: $((${{ secrets.MINOR }}+1))
+        repository: kedark0kil/task-fluxcd
+        token: ${{ secrets.GITHUB_TOKEN }}
