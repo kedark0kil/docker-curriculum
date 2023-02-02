@@ -15,8 +15,7 @@ metadata:
 spec:
   valuesFrom:
   - kind: ConfigMap
-    name: static-site-configmap
-    version: latest
+    name: static-site-configmap:latest
   interval: 2m
   chart:
     spec:

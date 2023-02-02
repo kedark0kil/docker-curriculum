@@ -7,6 +7,6 @@ metadata:
 spec:
   interval: 30s
   ref:
-    branch: staging
+    branch: master
   url: https://github.com/kedark0kil/docker-curriculum/tree/staging/static-site
 
