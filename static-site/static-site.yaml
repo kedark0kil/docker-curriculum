@@ -22,4 +22,4 @@ spec:
       chart: static-site
       sourceRef:
         kind: HelmRepository
-        name: cert-manager
+        name: static-site
