@@ -3,6 +3,8 @@ kind: Kustomization
 bases:
   - static-site/
   - static-site/chart/
+resources:
+  - static-site.yaml
 configMapGenerator:
   - name: static-site-configmap
     namespace: default
