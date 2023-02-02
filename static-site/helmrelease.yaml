@@ -13,13 +13,8 @@ metadata:
   name: static-site
   namespace: default
 spec:
-  valuesFrom:
-  - kind: ConfigMap
-    name: static-site-configmap:latest
-  interval: 2m
-  chart:
-    spec:
-      chart: static-site
-      sourceRef:
-        kind: HelmRepository
-        name: static-site
+  install:
+    valuesFrom:
+    - kind: ConfigMap
+      name: static-site-configmap
+    interval: 2m
