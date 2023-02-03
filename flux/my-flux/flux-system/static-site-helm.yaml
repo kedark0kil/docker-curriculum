@@ -14,5 +14,5 @@ spec:
       chart: static-site
       #version: v1.6.0
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: static-site
