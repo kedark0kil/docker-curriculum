@@ -1,0 +1,29 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: static-site
+  namespace: flux-system
+spec:
+  interval: 30s
+  ref:
+    branch: master
+  url: https://github.com/kedark0kil/docker-curriculum/static-site
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: static-site
+  namespace: default
+spec:
+  valuesFrom:
+  - kind: ConfigMap
+    name: static-site-configmap
+  interval: 1m
+  chart:
+    spec:
+      chart: static-site
+      #version: v1.6.0
+      sourceRef:
+        kind: Repository
+        name: static-site
