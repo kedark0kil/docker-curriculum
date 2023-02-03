@@ -9,4 +9,3 @@ resources:
 - gotk-sync.yaml
 - static-site/flux/my-flux/static-kustomization.yaml
 - static-site/flux/my-flux/static-site-source.yaml
-- static-site/static-site/template/deployment.yaml
