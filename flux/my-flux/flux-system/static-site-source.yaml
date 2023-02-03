@@ -8,4 +8,5 @@ spec:
   interval: 30s
   ref:
     branch: master
-  url: https://github.com/kedark0kil/docker-curriculum/
+  url: https://github.com/kedark0kil/docker-curriculum/static-site
+
