@@ -8,11 +8,10 @@ spec:
   valuesFrom:
   - kind: ConfigMap
     name: static-site-configmap
-  interval: 1m
   chart:
     spec:
-      chart: kedark0kil/static-site
-      #version: v1.6.0
+      chart: static-site
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: static-site
+  interval: 1m
