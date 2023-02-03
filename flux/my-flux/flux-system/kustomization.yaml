@@ -7,11 +7,11 @@ resources:
   - static-site-source.yaml
   #- static-site/static-site/deployment.yaml
   #- static-site/static-site-helm.yaml
-configMapGenerator:
-  - name: static-site-configmap
-    namespace: default
-    files:
-      - values.yaml=static-site/static-site/values.yaml
-bases:
-  - static-site/
-  - ststic-site/ststic-site/
+#configMapGenerator:
+#  - name: static-site-configmap
+#    namespace: default
+#    files:
+#      - values.yaml=static-site/static-site/values.yaml
+#bases:
+#  - static-site/
+#  - ststic-site/ststic-site/
