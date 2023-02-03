@@ -9,7 +9,7 @@ spec:
   path: ./kustomize
   prune: true
   sourceRef:
-    kind: HelmRepository
+    kind: GitRepository
     name: static-site
   targetNamespace: default
 
