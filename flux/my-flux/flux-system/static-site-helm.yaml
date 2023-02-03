@@ -14,5 +14,5 @@ spec:
       chart: static-site
       #version: v1.6.0
       sourceRef:
-        kind: Repository
+        kind: GitRepository
         name: static-site
