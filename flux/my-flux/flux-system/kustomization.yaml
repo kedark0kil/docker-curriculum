@@ -6,7 +6,7 @@ resources:
   - static-site-kustomization.yaml
   - static-site-source.yaml
   #- static-site/static-site/deployment.yaml
-  - static-site/static-site-helm.yaml
+  #- static-site/static-site-helm.yaml
 configMapGenerator:
   - name: static-site-configmap
     namespace: default
