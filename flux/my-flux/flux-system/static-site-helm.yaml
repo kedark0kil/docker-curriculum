@@ -11,8 +11,10 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: static-site
+      chart: kedark0kil/static-site
       #version: v1.6.0
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: static-site
+    interval: 1m0s
+    targetNamespace: default
