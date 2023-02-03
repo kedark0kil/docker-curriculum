@@ -12,3 +12,4 @@ spec:
     kind: GitRepository
     name: static-site
   targetNamespace: default
+
