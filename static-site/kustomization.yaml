@@ -1,0 +1,2 @@
+resources:
+  - static-site/static-site/template/deployment.yaml
