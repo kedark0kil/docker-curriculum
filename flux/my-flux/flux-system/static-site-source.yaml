@@ -7,3 +7,20 @@ metadata:
 spec:
   interval: 30s
   url: https://github.com/kedark0kil/docker-curriculum/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: static-site
+  namespace: default
+spec:
+  valuesFrom:
+  - kind: ConfigMap
+    name: static-site-configmap
+  chart:
+    spec:
+      chart: static-site
+      sourceRef:
+        kind: HelmRepository
+        name: static-site
+  interval: 1m
