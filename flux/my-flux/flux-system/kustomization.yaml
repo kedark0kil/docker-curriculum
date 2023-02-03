@@ -5,6 +5,3 @@ resources:
 - gotk-sync.yaml
 - static-site-kustomization.yaml
 - static-site-source.yaml
-#- static-site/static-site-helm.yaml
-#bases:
-#  - static-site/
