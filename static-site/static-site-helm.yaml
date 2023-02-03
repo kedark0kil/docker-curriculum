@@ -8,7 +8,7 @@ spec:
   interval: 30s
   ref:
     branch: master
-  url: https://github.com/kedark0kil/docker-curriculum/static-site
+  url: https://github.com/kedark0kil/docker-curriculum/
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
