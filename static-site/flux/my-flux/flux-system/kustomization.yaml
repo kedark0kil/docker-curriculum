@@ -7,10 +7,6 @@ resources:
 - static-site-kustomization.yaml
 - static-site-helm.yaml
 
-bases:
-  - static-site/static-site/
-  - static-site/
-
 configMapGenerator:
   - name: static-site-configmap
     files:
