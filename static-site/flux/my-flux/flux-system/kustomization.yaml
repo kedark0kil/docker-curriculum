@@ -3,3 +3,12 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+- static-site/static-site-source.yaml
+- static-site/static-site-kustomization.yaml
+#- static-site-helm.yaml
+- static-site/static-site-helm.yaml
+
+configMapGenerator:
+  - name: static-site-configmap
+    files:
+      - values.yaml=static-site/static-site/values.yaml
