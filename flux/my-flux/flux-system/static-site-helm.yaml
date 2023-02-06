@@ -3,15 +3,16 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: static-site
-  namespace: default
+  namespace: flux-system
 spec:
   valuesFrom:
   - kind: ConfigMap
     name: static-site-configmap
   chart:
     spec:
-      chart: static-site
+      chart: kedark0kil/static-site
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: static-site
   interval: 1m
+  targetNamespace: default
