@@ -5,8 +5,8 @@ metadata:
   name: static-site
   namespace: flux-system
 spec:
-  interval: 1m0s
-  path: ./static-site
+  interval: 30s
+  path: ./static-site/
   prune: true
   sourceRef:
     kind: GitRepository

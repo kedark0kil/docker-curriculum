@@ -14,5 +14,5 @@ spec:
       sourceRef:
         kind: GitRepository
         name: static-site
-  interval: 1m
+  interval: 30s
   targetNamespace: default
