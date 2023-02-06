@@ -5,7 +5,7 @@ resources:
 - gotk-sync.yaml
 - static-site-source.yaml
 - static-site-kustomization.yaml
-- static-site/static-site-helm.yaml
+- static-site-helm.yaml
 
 bases:
   - static-site/static-site/
@@ -14,4 +14,4 @@ bases:
 configMapGenerator:
   - name: static-site-configmap
     files:
-      - values.yaml=static-site/static-site/values.yaml
+      - values.yaml=static-site/values.yaml
