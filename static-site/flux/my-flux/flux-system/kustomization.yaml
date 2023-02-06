@@ -3,3 +3,12 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+- static-site-source.yaml
+- static-site-kustomization.yaml
+- static-site-helm.yaml
+
+configMapGenerator:
+  - name: static-site-configmap
+    namespace: flux-system
+    files:
+      - values.yaml=static-site/values.yaml
