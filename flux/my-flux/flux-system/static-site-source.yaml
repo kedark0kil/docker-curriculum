@@ -6,11 +6,11 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30s
-  url: ssh://git@github.com/kedark0kil/docker-curriculum
+  url: https://github.com/kedark0kil/docker-curriculum/
   ref:
     branch: master
   secretRef:
-    name: flux-system
+    name: static-site
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -19,7 +19,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./flux/my-flux
+  path: ./kustomize
   prune: true
   sourceRef:
     kind: GitRepository
