@@ -9,5 +9,6 @@ resources:
 
 configMapGenerator:
   - name: static-site-configmap
+    namespace: flux-system
     files:
       - values.yaml=static-site/values.yaml
