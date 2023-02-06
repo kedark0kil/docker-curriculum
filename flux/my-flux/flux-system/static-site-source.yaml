@@ -6,4 +6,4 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30s
-  url: ssh://git@github.com:kedark0kil/docker-curriculum.git
+  url: https://github.com/kedark0kil/docker-curriculum/
