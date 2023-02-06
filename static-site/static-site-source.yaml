@@ -6,4 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30s
-  url: https://github.com/kedark0kil/docker-curriculum/
+  ref:
+    branch: master
+  url: https://github.com/kedark0kil/docker-curriculum/static-site
+
