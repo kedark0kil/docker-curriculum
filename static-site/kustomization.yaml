@@ -1,2 +1,7 @@
 resources:
-  - static-site/static-site/static-site-helm.yaml
+  - static-site/static-site-helm.yaml
+
+configMapGenerator:
+  - name: static-site-configmap
+    files:
+      - values.yaml=static-site/static-site/values.yaml
