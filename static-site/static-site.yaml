@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: static-site
+  namespace: default
+spec:
+  valuesFrom:
+  - kind: ConfigMap
+    name: static-site-configmap
+  interval: 5m
+  chart:
+    spec:
+      chart: static-site
+      sourceRef:
+        kind: HelmRepository
+        name: cert-manager
